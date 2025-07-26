@@ -1,0 +1,45 @@
+import "../style.css";
+
+<html lang="en">
+  <body class="selection:bg-pink-200 h-screen">
+    <main class="max-w-lg mx-auto mt-50">
+      <h2 class=[
+        "text-md uppercase font-bold text-pink-500 opacity-50",
+        hovered && "opacity-100",
+      ]>
+        This is working
+      </h2>
+      <let/hovered=false>
+      <h1
+        onMouseOver() {
+          hovered = true;
+        }
+        onMouseLeave() {
+          hovered = false;
+        }
+        class="text-3xl">
+        Testing Marko!
+      </h1>
+
+      <hr class="h-px my-8 bg-gray-200 border-0">
+
+      <let/degF=60>
+      <const/degC=(((degF - 32) * 5) / 9)>
+
+      <input
+        class="w-full h-2 bg-zinc-200 rounded-lg appearance-none cursor-grabbing mb-4"
+        type="range"
+        value=degF
+        onInput(e) {
+          degF = +e.target.value;
+        }>
+      <div>It's ${degF}°F ↔ ${degC.toFixed(1)}°C</div>
+
+      <gauge temperature=degF/>
+
+      <hr class="h-px my-8 bg-gray-200 border-0">
+
+      <counter hovering=hovered/>
+    </main>
+  </body>
+</html>

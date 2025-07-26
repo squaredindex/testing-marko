@@ -1,0 +1,22 @@
+<div class="relative w-32 h-16 rounded-t-full bg-[conic-gradient(from_270deg_at_50%_100%,#e0f2fe,#e0f2fe,#81d4fa,#a5d6a7,#ffcc80,#ffab91_180deg)]">
+  <span
+    class="absolute box-border w-16 h-1 -bottom-0.5 bg-black border border-white origin-right"
+    style=`--rotation: ${(input.temperature * 180) / 100}deg; transform: rotate(var(--rotation));`/>
+</div>
+
+<div class=[
+  "p-4 mt-4 rounded-sm",
+  input.temperature > 80 && "bg-red-200 text-red-900",
+  input.temperature < 55 && "bg-blue-200 text-blue-900",
+]>
+  ${" "}
+  <if=(input.temperature > 80)>
+    It's${" "}
+    <strong>hot</strong>
+    ${" "}🥵
+  </if>
+  <else if=input.temperature < 55>
+    Brrrrr 🥶
+  </else>
+  <else>Lovely day! 😎</else>
+</div>

@@ -1,0 +1,21 @@
+{
+  "name": "marko",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@marko/type-check": "^2.1.1",
+    "@marko/vite": "^5.3.0",
+    "@types/bun": "latest",
+    "vite": "^7.0.6"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.11",
+    "express": "^5.1.0",
+    "marko": "^6.0.41",
+    "tailwindcss": "^4.1.11"
+  }
+}
