@@ -1,3 +1,8 @@
+export type Temperature = number & { readonly __brand: "Temperature" };
+export type Input = {
+  temperature: Temperature,
+};
+
 <div class="relative w-32 h-16 rounded-t-full bg-[conic-gradient(from_270deg_at_50%_100%,#e0f2fe,#e0f2fe,#81d4fa,#a5d6a7,#ffcc80,#ffab91_180deg)]">
   <span
     class="absolute box-border w-16 h-1 -bottom-0.5 bg-black border border-white origin-right"
