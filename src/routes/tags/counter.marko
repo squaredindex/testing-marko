@@ -1,3 +1,8 @@
+export type Hovering = boolean & { readonly __brand: "Hovering" };
+export type Input = {
+  hovering: Hovering,
+};
+
 <div>
   <let/count=0>
   <button
